@@ -1,0 +1,16 @@
+{
+    "users": [
+      {
+        "id": "1",
+        "name": "Superadmin",
+        "email": "superadmin@example.com",
+        "role": "superadmin"
+      },
+      {
+        "id": "2",
+        "name": "Gestor de documentos",
+        "email": "gestor-documentos@example.com",
+        "role": "gestor-documentos"
+      }
+    ]
+  }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Gestión Documental</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-4Gt43T9bL+7TnCX3qQErj1uSv+wQZwVgI/PjnYc7z4Hk4mJ7Gj/4FkDE/4CdwvH/pSlO5O5d5h5M5X9NCCK8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-SvZ6U+oh6qhcLQzff9X1m+8xWJGpRLdR/zEZrCpBgz8egc5N5d5gARb9XNvPh8WxETCSThbiEJnL+HQvtn2VJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+</head>
+<body>
+    <div class="container">
+        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="updateModalLabel">Actualizar documento</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="documento" class="form-label">Documento</label>
+                      <input type="text" class="form-control" id="documento" name="documento" value="Documento1">
+                    </div>
+                    <div class="mb-3">
+                      <label for="tipo" class="form-label">Tipo de documento</label>
+                      <input type="text" class="form-control" id="tipo" name="tipo" value="Tipo1">
+                    </div>
+                    <div class="mb-3">
+                      <label for="formato" class="form-label">Formato</label>
+                      <input type="text" class="form-control" id="formato" name="formato" value="Formato1">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar cambios</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- Agregamos el siguiente código para importar el modal -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-/GdGmZ1N1S6PB/zzPxAxh6p4Z+L4Z6Gxyw8wG+j/dGbcNU5E5r5X/kWpXvI9aY1" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $("#updateModalBtn").click(function() {
+                $("#updateModal").modal("show");
+            });
+        });
+    </script>
+    <!-- Fin del código para importar el modal -->
+
+    <!-- Aquí importamos el código del modal -->
+    <% include modalForm.ejs %>
+</body>
+</html>
